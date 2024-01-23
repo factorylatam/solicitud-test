@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="boletaInformativa" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" isFloatColumnFooter="true" whenResourceMissingType="Empty" uuid="ffc1e9db-babf-4c2f-abf1-5f068c09d21c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#C0C0C0">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#C0C0C0">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<parameter name="detVeh" class="pe.gob.sunarp.app.solicitud.bean.PartidaDirectaDetBean"/>
+	<parameter name="urlImage" class="java.io.InputStream"/>
+	<parameter name="rptPropietarios" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="rptCaracteristicas" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="rptAfectaciones" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="rptParticipantes" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="rptTitulosPendientes" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="numId" class="java.lang.String"/>
+	<parameter name="montoP" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<group name="GroupPropietarios">
+		<groupHeader>
+			<band height="40">
+				<subreport>
+					<reportElement x="0" y="10" width="554" height="20" uuid="8a1eab35-9e8f-4dc3-a35d-f91487524061"/>
+					<subreportParameter name="detVeh">
+						<subreportParameterExpression><![CDATA[$P{detVeh}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="rptCaracteristicas">
+						<subreportParameterExpression><![CDATA[$P{rptCaracteristicas}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="rptAfectaciones">
+						<subreportParameterExpression><![CDATA[$P{rptAfectaciones}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="rptParticipantes">
+						<subreportParameterExpression><![CDATA[$P{rptParticipantes}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="rptTitulosPendientes">
+						<subreportParameterExpression><![CDATA[$P{rptTitulosPendientes}]]></subreportParameterExpression>
+					</subreportParameter>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{detVeh}.getListProp())]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{rptPropietarios}]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="50"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="152" splitType="Stretch">
+			<staticText>
+				<reportElement x="140" y="20" width="280" height="58" uuid="0ed7e692-a317-4003-b068-deb7c0854095">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[El reverso se encuentra en blanco.
+No tiene validez para ningún Trámite
+Administrativo, Judicial y Otros.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="200" height="20" uuid="3ea77342-362b-4a46-8e70-9896f0ffc06d">
+					<property name="local_mesure_unitx" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[COPIA INFORMATIVA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="78" width="554" height="30" uuid="42efc5eb-e7e5-4253-8c94-0151388c54f9">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BOLETA INFORMATIVA]]></text>
+			</staticText>
+			<image>
+				<reportElement x="-1" y="0" width="121" height="70" uuid="2bb69aa2-1cd0-4f01-8268-d5b5008d509c"/>
+				<imageExpression><![CDATA[$P{urlImage}]]></imageExpression>
+			</image>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="430" y="36" width="110" height="16" uuid="2bd91258-90b5-4a52-85da-f7b24a2f4978"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="190" y="110" width="189" height="40" uuid="a494cecf-9eed-4792-960f-1218b467b8ca"/>
+				<hc:html xmlns:hc="http://jasperreports.sourceforge.net/htmlcomponent" xsi:schemaLocation="http://jasperreports.sourceforge.net/htmlcomponent http://jasperreports.sourceforge.net/xsd/htmlcomponent.xsd" scaleType="RetainShape" horizontalAlign="Center" verticalAlign="Middle">
+					<hc:htmlContentExpression><![CDATA["<table width='230' border='1' cellpadding='0' cellspacing='0'><tr bgcolor='#CCCCCC'><td width='85'><div align='center'><font style='font-family:Arial, Helvetica, sans-serif;font-size: 9px'>Nro. Transacción</font></div></td><td width='85'><div align='center'><font style='font-family:Arial, Helvetica, sans-serif;font-size: 9px'>Pagado S/.</font></div></td></tr><tr>	<td><div align='center'><font style='font-family:Arial, Helvetica, sans-serif;font-size: 9px'>"+$P{numId}+"</font></div></td><td><div align='center'><font style='font-family:Arial, Helvetica, sans-serif;font-size: 9px'>"+$P{montoP}+"</font></div></td></tr></table>"]]></hc:htmlContentExpression>
+				</hc:html>
+			</componentElement>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="430" y="20" width="110" height="16" uuid="18ed7dcd-9c9e-49bc-9bd2-1b7a36497d9d"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["SUNARP"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="49">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="-1" y="0" width="554" height="35" uuid="fb9f833a-f0ad-470a-9e6d-f42c4f8fb9ae">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[COPIA INFORMATIVA  El reverso se encuentra en blanco.
+No tiene validez para ningún Trámite Administrativo, Judicial y Otros.]]></text>
+			</staticText>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="325" y="35" width="40" height="13" backcolor="#FFFFFF" uuid="62c42c82-75f5-429b-bf20-596a02880760"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="140" y="35" width="185" height="13" backcolor="#FFFFFF" uuid="97469688-da0b-4cae-bc5c-12a765d2c167"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de "]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Afectaciones" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f45fe331-3180-4f3f-baef-7f39958cae7f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="detVeh" class="pe.gob.sunarp.app.solicitud.bean.PartidaDirectaDetBean"/>
+	<parameter name="rptParticipantes" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="rptTitulosPendientes" class="net.sf.jasperreports.engine.JasperReport"/>
+	<field name="numExpeAfec" class="java.lang.String"/>
+	<field name="descTipoAfec" class="java.lang.String"/>
+	<field name="fechAfec" class="java.lang.String"/>
+	<field name="juezAfec" class="java.lang.String"/>
+	<field name="juzg" class="java.lang.String"/>
+	<field name="secrAfect" class="java.lang.String"/>
+	<field name="causAfec" class="java.lang.String"/>
+	<field name="cantGravamen" class="java.lang.String"/>
+	<field name="listPartGravVigentes" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="18" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<staticText>
+				<reportElement x="-23" y="0" width="565" height="15" uuid="a9b40612-af4b-4dac-b89d-028716051184">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[COPIA INFORMATIVA El reverso se encuentra en blanco. No tiene validez para ningún trámite administrativo, judicial y otros.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="-15" width="558" height="1" uuid="ec23d793-edf7-4917-84e5-a874ed7f6a79">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="-20" y="16" width="558" height="1" uuid="2f4b9aa7-20bd-4009-897a-c78d620e2ca4">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="-23" y="-14" width="565" height="16" uuid="ab42beac-2a8d-4cfc-90b6-f373e83a4ed9">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{detVeh}.getListGrav()!=null && $P{detVeh}.getListGrav().size()>0)?"AFECTACIONES":"NO REGISTRA AFECTACIONES"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="102" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[($P{detVeh}.getListGrav()!=null && $P{detVeh}.getListGrav().size()>0)]]></printWhenExpression>
+			<textField>
+				<reportElement x="15" y="0" width="539" height="17" uuid="18413044-6494-449e-9918-220ecb15d7d3">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{cantGravamen}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="15" height="17" isPrintWhenDetailOverflows="true" uuid="829ebe8d-c943-4f5b-a59e-e804026d2d0d">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT} + ".-"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="17" width="538" height="1" uuid="ed9500c0-7ad6-4fc7-8eb5-63fad9ae7b36">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="20" width="55" height="13" uuid="df18b4ca-9bef-41f8-8f4b-0175e0650c77">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Expediente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="33" width="55" height="13" uuid="0cde93e8-b3d1-4f55-b921-9a9fa406501e">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Afectación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="46" width="55" height="13" uuid="bc09e710-97aa-4c72-abe2-ec93f372277a">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Fecha Afec]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="59" width="55" height="13" uuid="f4406ddc-e2dd-4cd4-9b97-5f50a89a7cc9">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Juez]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="72" width="55" height="13" uuid="061158ac-63ca-43e4-a334-52baf1358e6d">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Emisor Desc]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="72" width="55" height="13" uuid="83330b65-f98e-46af-af90-5f965b4cadc3">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Doc. Desc]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="46" width="55" height="13" uuid="2cd83dc0-c226-47fd-be09-8dddfeae4af3">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Secr. Juzga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="59" width="55" height="13" uuid="df312f2b-35a2-4cc9-b93e-0504c9f98ed2">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Causal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="33" width="55" height="13" uuid="55b56265-f231-43a7-9ac1-83a88db56963">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Juzgado]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="55" y="20" width="210" height="13" uuid="1f54abda-fc68-440e-8f98-c2a65efa2d63">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+ $F{numExpeAfec}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="55" y="33" width="210" height="13" uuid="63a7c71e-e606-4dfa-a82d-cfa9d4eb13b6">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": " + $F{descTipoAfec}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="55" y="46" width="210" height="13" uuid="ce56f8c9-e34c-461d-888f-363c88632188">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{fechAfec}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="55" y="59" width="210" height="13" uuid="fc3e06cf-6dbd-4fa9-8f7b-4b3bfee93819">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+ (($F{juezAfec}==null || $F{juezAfec}.trim().equals(""))?"##########":$F{juezAfec})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="55" y="73" width="210" height="13" uuid="9b86e806-58e1-41d1-857f-58e49f541f3d">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+"##########"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="33" width="225" height="13" uuid="7a3b352b-0b33-4cfc-8858-3f2cc5666b8a">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+ (($F{juzg}==null || $F{juzg}.trim().equals(""))?"##########":$F{juzg})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="46" width="225" height="13" uuid="150a7e90-66d2-4a4c-aa5c-b0b4337374ed">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{secrAfect}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="59" width="225" height="13" uuid="7d64a717-110f-4c7c-ac17-0436a6d9f255">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{causAfec}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="72" width="225" height="13" uuid="e16b1a2f-a933-4620-b0f0-3b0d0e4fddf2">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+"##########"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="86" width="538" height="1" uuid="a21faf96-3a4b-4abd-a60c-ffa698663b3b">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="88" width="160" height="13" uuid="f37469b7-9665-46e8-810e-af63855b0696">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="9" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Relación de Participantes]]></text>
+			</staticText>
+		</band>
+		<band height="24">
+			<subreport>
+				<reportElement x="0" y="6" width="538" height="18" uuid="3ddc4c71-4bb6-4700-b4fe-1b59e7210dc8">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{listPartGravVigentes})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{rptParticipantes}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<summary>
+		<band height="36" splitType="Stretch">
+			<subreport>
+				<reportElement x="-20" y="5" width="552" height="31" uuid="5676d492-c5ee-4e57-be24-305ed3e6e94f">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<subreportParameter name="detVeh">
+					<subreportParameterExpression><![CDATA[$P{detVeh}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{detVeh}.getListTituPend())]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{rptTitulosPendientes}]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

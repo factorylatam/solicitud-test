@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Propietarios" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Error" uuid="22435a37-d7aa-4a7a-82e9-d3fda3f1cd75">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="detVeh" class="pe.gob.sunarp.app.solicitud.bean.PartidaDirectaDetBean"/>
+	<parameter name="rptCaracteristicas" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="rptAfectaciones" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="rptParticipantes" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="rptTitulosPendientes" class="net.sf.jasperreports.engine.JasperReport"/>
+	<field name="propietario" class="java.lang.String"/>
+	<field name="documentos" class="java.lang.String"/>
+	<field name="direccion" class="java.lang.String"/>
+	<field name="tipoPartic" class="java.lang.String"/>
+	<field name="tipoDocumento" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="1" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<staticText>
+				<reportElement x="-20" y="-20" width="191" height="21" uuid="e0fcc497-8e2c-4cb7-b9b7-89665700ab07"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Datos del Propietario]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<staticText>
+				<reportElement x="-20" y="0" width="50" height="20" uuid="946145ea-07ff-4f05-a633-ad9fb1ea96e4"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="20" width="50" height="20" uuid="3c51c1b6-e869-41bd-901d-2560ceed648f"/>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="30" y="0" width="390" height="20" uuid="fb299b2b-ab97-4e29-a41e-fba97386f6f1">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+ $F{propietario}.substring(3)]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="20" width="390" height="20" uuid="36fb7a2d-ce93-4b92-824a-3c64321a0fb6">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[": "+ $F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="20" width="80" height="20" uuid="003aeee8-7f51-4383-8166-883bebd6ab9c">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{documentos}!=null?$F{documentos}:"NO CONSIGNA")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="0" width="59" height="20" uuid="83e2ade4-2864-40c4-bb65-d68971eceb4b">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoDocumento}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="35" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport>
+				<reportElement x="-20" y="3" width="595" height="26" uuid="476e01cb-dcf9-4aed-91bd-eb98355aabfb">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<subreportParameter name="detVeh">
+					<subreportParameterExpression><![CDATA[$P{detVeh}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="rptAfectaciones">
+					<subreportParameterExpression><![CDATA[$P{rptAfectaciones}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="rptParticipantes">
+					<subreportParameterExpression><![CDATA[$P{rptParticipantes}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="rptTitulosPendientes">
+					<subreportParameterExpression><![CDATA[$P{rptTitulosPendientes}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression><![CDATA[$P{rptCaracteristicas}]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Caracteristicas" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f2f0bdf0-fd1f-40ac-b77a-7a45637ba3e7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="detVeh" class="pe.gob.sunarp.app.solicitud.bean.PartidaDirectaDetBean"/>
+	<parameter name="rptAfectaciones" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="rptParticipantes" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="rptTitulosPendientes" class="net.sf.jasperreports.engine.JasperReport"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="205" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="-20" y="-1" width="250" height="21" uuid="7d790523-6582-4eb8-b998-53264180ce61"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Características del Vehículo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="-20" width="595" height="15" uuid="91ed0514-47f2-4ce4-a58a-e7ef73c9b58c">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[COPIA INFORMATIVA El reverso se encuentra en blanco. No tiene validez para ningún trámite administrativo, judicial y otros.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="20" width="60" height="14" uuid="a169b40a-eb9f-443f-a4c0-666c52207215">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Placa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="34" width="60" height="14" uuid="4cf1628e-cd17-4443-8f79-1c69113c8087">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Tipo Uso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="48" width="60" height="14" uuid="5552d209-a623-42d5-bbb0-507a595fede8">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Categoría]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="62" width="60" height="14" uuid="2e2d3976-fdc5-4b8a-9916-af203cf19211">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Carrocería]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="76" width="60" height="14" uuid="0d4731e8-bfee-4eff-a77a-e7649b9c4292">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Marca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="132" width="60" height="14" uuid="b3735eaf-adab-4205-80c6-46ecb712b4a5">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[N° Versión]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="90" width="60" height="14" uuid="2a50cf67-ca34-4f2d-8ab2-bd9b9b5b5f74">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Modelo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="118" width="60" height="14" uuid="bd15efed-d883-4404-9664-07f7ddc76882">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Año Fab]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="104" width="60" height="14" uuid="6820fb2f-b94f-47e9-bbe4-144e099cc4a6">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Año Mod]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="146" width="60" height="14" uuid="5e9a49c8-a4e7-4316-ad11-cb1c653e74ab">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[N° Serie]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="160" width="60" height="14" uuid="c922983b-f55f-4fbe-96d0-cdcdd9052f97">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[N° de VIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="174" width="60" height="14" uuid="e187566f-b751-4301-a843-d09162dbd9d8">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Color 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="188" width="60" height="14" uuid="811b74e6-1dde-4148-a51d-132f359f01ce">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Color 2]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="20" width="131" height="14" uuid="9f69ae38-7100-4913-9da3-0be570898d14">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getNumPlaca()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="34" width="321" height="14" uuid="ac5dd1bd-98a0-43fd-9e02-6b837deb115a">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+ $P{detVeh}.getDescTipoUso()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="48" width="131" height="14" uuid="560219c4-077a-4795-aaa8-ab2ef3d41c1d">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+ $P{detVeh}.getCoCateg()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="62" width="131" height="14" uuid="a3179658-7375-4c7b-8b0b-49268502e507">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getDescTipoCarr()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="76" width="131" height="14" uuid="b699169f-2b55-404e-8f22-e12a28536059">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getMarca()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="132" width="131" height="14" uuid="3268e185-8d67-4037-83e6-48f1cb2c4c0b">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getNoVers()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="118" width="131" height="14" uuid="115b4a13-d3db-4b03-b4e5-e93f14c780a0">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getAnoFab()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="90" width="131" height="14" uuid="e95c70c2-5261-4cad-91d9-bb52f177df3d">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getModelo()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="104" width="131" height="14" uuid="db40d133-3c72-4100-bd5f-c9f244e3d7d6">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getAnMode()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="146" width="131" height="14" uuid="ef8fbb54-5d26-4923-9a9a-7604e9898373">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getNumSerie()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="188" width="131" height="14" uuid="269d9a82-59f8-442d-a517-6efc968e3ee8">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+ $P{detVeh}.getColor2()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="160" width="131" height="14" uuid="9a38ee44-242c-4366-b405-ce3ef64c3da6">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getNoVin()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="40" y="174" width="151" height="14" uuid="20cc9567-592e-4240-9fc1-2f76a396ba16">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+ $P{detVeh}.getColor1()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="48" width="131" height="14" uuid="21429e93-cb9f-4a92-aa3b-c05a91afa5ea">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getColor3()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="90" width="131" height="14" uuid="3616790c-6707-42a8-a697-2501a8509643">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+ $P{detVeh}.getPoMotr()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="146" width="131" height="14" uuid="0963d949-bb4d-4867-9d87-284b190ecd01">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getPesoBruto() + " tn"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="174" width="131" height="14" uuid="89cdf5a8-d3bb-49db-82f6-5dbdb963de42">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getNumAsientos()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="171" y="118" width="60" height="14" uuid="f56e5d5e-603a-48b1-ba98-407d785f4f4a">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Cilindrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="174" width="60" height="14" uuid="a945542e-7da0-43f3-b0fe-591d53aee64e">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[N° Asientos]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="231" y="62" width="131" height="14" uuid="8509a049-f2de-468e-898f-b522f211b79d">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getNumMotor()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="171" y="62" width="60" height="14" uuid="7d48f5fc-8e25-4b74-96ea-00fc396ad169">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[N° Motor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="160" width="60" height="14" uuid="490c44ce-a2b7-4fa4-ac42-a395bdb7e50a">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Carga Útil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="48" width="60" height="14" uuid="10ce22ee-3dd9-4241-a011-faa8cb5ddf02">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Color 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="146" width="60" height="14" uuid="1fb545be-77f5-4564-8360-ece70343e79b">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Peso Bruto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="104" width="60" height="14" uuid="07d06e1c-6b88-4fc3-bd0f-1a1f0f7d4a81">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[N° Cilindros]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="231" y="76" width="131" height="14" uuid="2ccfae61-3879-4183-b247-3928339dd912">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getDescTipoComb()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="132" width="131" height="14" uuid="4b133b09-022e-422b-8422-6ad5b820cba3">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getPesoSeco() + " tn"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="171" y="76" width="60" height="14" uuid="a933b0bb-b729-4599-82a7-caac8ba12413">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Tipo Combus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="90" width="60" height="14" uuid="6205502c-7310-4b99-9611-0e84bae82d34">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Pot. Motor]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="231" y="104" width="131" height="14" uuid="457ced26-26dd-4502-9c48-82df10390939">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getNumCilindros()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="118" width="131" height="14" uuid="2ca94511-afa0-46ec-a368-2cf8b3bed04f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+ $P{detVeh}.getNoClda() + ($P{detVeh}.getNoClda().equals("##########")?"":" L")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="171" y="132" width="60" height="14" uuid="ade658c0-dd72-4ba8-b591-ee737641d370">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Peso Neto]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="231" y="160" width="131" height="14" uuid="cdae3a61-2533-49f1-809d-6d5fd2a5e428">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getPesoUtil() + " tn"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="188" width="131" height="14" uuid="3e85eae9-e64e-4a80-b466-fd550883ed2d">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getNumPasajeros()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="171" y="188" width="60" height="14" uuid="08120d1d-2a2f-40c7-bcd9-cd0e86e11360">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[N° Pasajer.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="160" width="131" height="14" uuid="654eab57-8dda-4568-a609-a2a535d3eb57">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+ ($P{detVeh}.getFechaPropi()!=null?"##########":$P{detVeh}.getFechaPropi())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="362" y="160" width="68" height="14" uuid="65705957-6af6-4495-ad9a-e98471cf1c51">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Fec. Prop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="118" width="68" height="14" uuid="f9a204c2-32fc-4156-b986-efad2044f635">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Altura]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="34" width="131" height="14" uuid="a1c53340-4098-40cc-b2f2-6cbe9dd94ae6">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getNumPartida()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="132" width="131" height="14" uuid="5b49bbc0-0003-4c26-8848-499923ed58c2">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getNoForm()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="118" width="131" height="14" uuid="da085c41-ead4-434b-b2cc-3cccf645d068">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getAltura() + " mt"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="362" y="146" width="68" height="14" uuid="7ab8c613-a182-4449-b7cf-4a3b0ea579ce">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Inmatriculac.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="62" width="131" height="14" uuid="fbbd3140-c635-4cb8-b9d0-b317bc8a88c2">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getNumEjes()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="104" width="131" height="14" uuid="7558b30e-b08c-4acc-b99f-71fe8d83f35b">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getAncho() + " mt"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="362" y="132" width="68" height="14" uuid="9300fd30-21d2-438f-a9e3-48a0bdbb7265">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Form. Rodan.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="76" width="131" height="14" uuid="f16cc2f2-6e66-464f-8c39-292483a64bff">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getNumRuedas()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="362" y="76" width="68" height="14" uuid="70feb588-df59-4d16-8a06-38030da759b0">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[N° Ruedas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="174" width="68" height="14" uuid="88eb486c-68e9-4d74-bcdc-bfbd9c8e10c1">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Condición]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="62" width="68" height="14" uuid="ecf91c2f-f939-40a1-b95e-c145b87b68db">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[N° Ejes]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="90" width="131" height="14" uuid="328666c4-1347-4d34-aa74-be4664ad967d">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getLongitud() + " mt"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="146" width="131" height="14" uuid="1262a88e-760c-4935-8fa6-94ab7579f4c0">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+ ($P{detVeh}.getFecIns()!=null?$P{detVeh}.getFecIns():"##########")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="362" y="90" width="68" height="14" uuid="2f7acf06-6e17-4212-aa93-cf64e6c5ad0a">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Longitud]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="104" width="68" height="14" uuid="495a9fc1-bedb-46d9-b806-d353c361025e">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Ancho]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="174" width="131" height="14" uuid="a66783ab-1c60-4b73-881f-d15b34bf2736">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{detVeh}.getDescCondVeh()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="362" y="34" width="68" height="14" uuid="e22671b6-dbbe-48c6-8ed1-9726ddc6b04a">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[N° Partida]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="171" y="20" width="190" height="14" uuid="f7d61f8a-2cb5-4230-9575-a92034715e4c">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{detVeh}.getNomOficina()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="20" width="190" height="14" uuid="6400dc04-cc16-4b90-89e2-a586bff19e7d">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{detVeh}.getNuevaPlaca()!=null && !($P{detVeh}.getNuevaPlaca().trim().equals("")))?"Nueva Placa: " + $P{detVeh}.getNuevaPlaca() :""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="0" width="290" height="14" forecolor="#FF0000" uuid="19ad2f74-661b-44ba-abee-14d6f5f6a8b2">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["(VEHÍCULO " + ($P{detVeh}.getEstado().equals("DE BAJA")?"FUERA DE CIRCULACIÓN":$P{detVeh}.getEstado()) + ")"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<summary>
+		<band height="35" splitType="Stretch">
+			<subreport>
+				<reportElement x="-20" y="0" width="574" height="30" uuid="7cb418e3-e1a5-42fd-8426-ee0520a6f320"/>
+				<subreportParameter name="detVeh">
+					<subreportParameterExpression><![CDATA[$P{detVeh}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="rptParticipantes">
+					<subreportParameterExpression><![CDATA[$P{rptParticipantes}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="rptTitulosPendientes">
+					<subreportParameterExpression><![CDATA[$P{rptTitulosPendientes}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{detVeh}.getListGrav())]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{rptAfectaciones}]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>
